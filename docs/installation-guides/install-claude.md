@@ -95,6 +95,15 @@ With an environment variable:
 claude mcp add --transport http github https://api.githubcopilot.com/mcp -H "Authorization: Bearer $(grep GITHUB_PAT .env | cut -d '=' -f2)"
 ```
 
+#### Windows (PowerShell)
+
+If you see `missing required argument 'name'`, put the server name immediately after `claude mcp add`:
+
+```powershell
+$pat = "YOUR_GITHUB_PAT"
+claude mcp add github --transport http https://api.githubcopilot.com/mcp/ -H "Authorization: Bearer $pat"
+```
+
 ---
 
 ## Claude Desktop
